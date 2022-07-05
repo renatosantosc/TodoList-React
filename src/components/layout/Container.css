@@ -1,0 +1,141 @@
+
+
+.fundo{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: 100;
+    right: 0;
+    background: linear-gradient(90deg, rgba(65,184, 131, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    display: block; 
+}
+.fechar-janela{
+    display: none;
+}
+#fundo-abrir{
+    display: none;
+}
+
+.janela-edicao{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #41b683;
+    z-index: 200;
+    border-radius: 8px;
+    width: 70%;
+    display: block;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+.janela-edicao-fechar{
+    display: none ;
+}
+#janela-edicao-abrir{
+    display: none;
+}
+
+form{
+    width: 100%;
+    margin-top: 25px;
+}
+.frm-linha{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.frm-linha label{
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: sans-serif;
+}
+.frm-linha textarea{
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #9ea3a5;
+    font-size: 1rem;
+    color: black;
+    resize: none;
+    font-family: roboto;
+    font-weight: 600;
+}
+
+.frm-linha button{
+    background-color: #41b683;
+    color: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 1rem;
+    border: 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: sans-serif;
+    letter-spacing: 1.2px;
+    outline: none;
+    border: 2px solid #fff;
+    width: 50%;
+    margin: 0 auto;
+}
+.frm-linha button:hover{
+    background-color: #308f66;
+    transition: all .2s linear;
+}
+.btnfechar{
+    position: absolute;
+    top: -25px;
+    right: -17px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #308f66;
+    background-color: #308f66;
+    color: #fff;
+    outline: none;
+}
+.btnfechar:hover{
+    background-color: #41b883;
+    transition: all .2s linear;
+    border: 2px solid #41b683;
+}
+
+@media(max-width: 780px){
+    .janela-edicao{
+        width: 90%;
+    }
+    .btnfechar{
+        width: 45px;
+        height: 45px;
+    }
+    .frm-linha button {
+        font-weight: 600;
+    }
+}
+
+@media(max-width: 800px) and (max-height: 426px){
+    .janela-edicao{
+        width: 70%;
+        padding: 8px 20px;
+        top: 65%;
+    }
+    form {
+        margin-top: 10px;
+    }
+    .frm-linha textarea {
+        height: 120px;
+    }
+}
+@media(max-width: 426px) and (max-height: 380px){
+    .frm-linha textarea {
+        height: 90px;
+    }
+    .janela-edicao{
+        width: 80%;
+    }
+}
