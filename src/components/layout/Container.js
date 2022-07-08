@@ -19,7 +19,7 @@ const Container = (props) => {
                     props.SetColor('janela-edicao-fechar')
                     props.SetFundo('fechar-janela')
                 }} >
-                    <i>
+                    <i className='icon'>
                         <RiCloseLine />
                     </i>
                 </button>

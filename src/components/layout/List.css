@@ -37,6 +37,10 @@
     color: #41b683;
     font-weight: bolder;
 }
+.btnList i svg{
+    align-items: center;
+    margin-top: 2px;
+}
 @media(max-width: 780px){
     .tasks-container span{
         width: 60%;

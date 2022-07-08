@@ -105,6 +105,11 @@ form{
     border: 2px solid #41b683;
 }
 
+.icon svg {
+    font-size: 2rem;
+    margin-top: 2px;
+}
+
 @media(max-width: 780px){
     .janela-edicao{
         width: 90%;
