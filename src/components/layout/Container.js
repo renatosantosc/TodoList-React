@@ -1,5 +1,7 @@
 import './Container.css'
 
+import { RiCloseLine } from 'react-icons/ri'
+
 const Container = (props) => {
 
     const handleChange = e =>{
@@ -17,7 +19,9 @@ const Container = (props) => {
                     props.SetColor('janela-edicao-fechar')
                     props.SetFundo('fechar-janela')
                 }} >
-                    <i className="fa fa-remove fa-2x"></i>
+                    <i>
+                        <RiCloseLine />
+                    </i>
                 </button>
                     <h2 className="idEdicao">ID: {props.idElement}</h2>            
             <hr/>

@@ -3,6 +3,7 @@ import './List.css'
 import { useState } from 'react'
 
 import { FiTrash2 } from 'react-icons/fi'
+import { BiPencil } from 'react-icons/bi'
 
 import Container from './Container'
 import MessageDelete from './MessageDelete'
@@ -36,7 +37,9 @@ const List = (props) => {
                                 SetColor('janela-edicao')
                                 SetFundo('fundo')
                                 }}>
-                                <i className="fa fa-pencil"></i>
+                                <i>
+                                    <BiPencil />
+                                </i>
                             </button>
 
                             <button className='btnDelete' title='Excluir' onClick={() => {
@@ -51,7 +54,6 @@ const List = (props) => {
                             <div className='data'>
                                 <span>{itemObj.date}</span>
                             </div>
-                            {/* className="fa fa-trash" */}
                         </div>
                     </li> )
                     
