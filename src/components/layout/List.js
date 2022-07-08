@@ -2,6 +2,8 @@ import './List.css'
 
 import { useState } from 'react'
 
+import { FiTrash2 } from 'react-icons/fi'
+
 import Container from './Container'
 import MessageDelete from './MessageDelete'
 
@@ -42,12 +44,14 @@ const List = (props) => {
                                 SetFundo('fundo')
                                 SetDeleteConatiner('container-message')
                                 }}>
-                                <i className="fa fa-trash"></i>
+                                <i>
+                                    <FiTrash2 />
+                                </i>
                             </button>
                             <div className='data'>
                                 <span>{itemObj.date}</span>
                             </div>
-                            
+                            {/* className="fa fa-trash" */}
                         </div>
                     </li> )
                     
