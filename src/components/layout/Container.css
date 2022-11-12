@@ -112,7 +112,7 @@ form{
 
 @media(max-width: 780px){
     .janela-edicao{
-        width: 90%;
+        width: 80%;
     }
     .btnfechar{
         width: 45px;

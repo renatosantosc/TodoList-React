@@ -1,0 +1,63 @@
+.messageTask {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* padding: 30px; */
+    background-color: #fff;
+    border: 1px solid #41b683;
+    z-index: 200;
+    border-radius: 8px;
+    width: 40%;
+    display: block;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 15px 30px 50px 30px;
+}
+.messageTask label {
+    display: block;
+    font-size: 1.1rem;
+    font-family: roboto;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+.fecharTask{
+    display: none;
+}
+.messageTask hr{
+    margin-bottom: 9%;
+}
+.messageTask span{
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+.btn-fechar{
+    position: absolute;
+    top: -25px;
+    right: -17px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #308f66;
+    background-color: #308f66;
+    color: #fff;
+    outline: none;
+}
+.btn-fechar:hover{
+    background-color: #41b883;
+    transition: all .2s linear;
+    border: 2px solid #41b683;
+}
+
+@media(max-width: 780px){
+    .messageTask{
+        width: 80%;
+        padding: 15px 30px 40px 30px;
+    }
+    .messageTask hr{
+        margin-bottom: 15%;
+    }
+}

@@ -4,9 +4,11 @@ import { useState } from 'react'
 
 import { FiTrash2 } from 'react-icons/fi'
 import { BiPencil } from 'react-icons/bi'
+import { GrView } from 'react-icons/gr'
 
 import Container from './Container'
 import MessageDelete from './MessageDelete'
+import ContainerTask from './ContainerTask'
 
 const List = (props) => {
 
@@ -17,6 +19,7 @@ const List = (props) => {
     const [color, SetColor] = useState('janela-edicao-fechar')// CSS da Janela de Edição
     const [fundo, SetFundo] = useState('fechar-janela')// CSS do fundo com opacidade atrás da janela
     const [deleteContainer, SetDeleteConatiner] = useState('fechar')// CSS da janela de delete
+    const [messageTask, SetMessageTask] = useState('fecharTask')
     
     return(
         <>
@@ -30,6 +33,18 @@ const List = (props) => {
                         <span>{itemObj.name}</span>
                         
                         <div className='btnList'>
+
+                            <button className='btnView' title='Visualizar'
+                                onClick={() => {
+                                    SetMessageTask('messageTask')
+                                    SetNameElement(itemObj.name)
+                                    SetFundo('fundo')
+                                }}>
+                                <i>
+                                    <GrView />
+                                </i>
+                            </button>
+
                             <button className='btnEdite' title='Editar' onClick={() =>{
                                 //Capturando valores da tarefa selecionada 
                                 SetIdElement(itemObj.key)
@@ -51,6 +66,7 @@ const List = (props) => {
                                     <FiTrash2 />
                                 </i>
                             </button>
+
                             <div className='data'>
                                 <span>{itemObj.date}</span>
                             </div>
@@ -81,6 +97,15 @@ const List = (props) => {
                 SetItemList={props.SetItemList}
                 SetIdElement={SetIdElement}
                 idElement={idElement}
+                />
+                
+                <ContainerTask 
+                nameElement={nameElement}
+                SetNameElement={SetNameElement}
+                messageTask={messageTask}
+                SetMessageTask={SetMessageTask}
+                fundo={fundo}
+                SetFundo={SetFundo}
                 />
                 
             </div>    

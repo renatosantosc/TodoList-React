@@ -14,22 +14,27 @@
 .new-task-button:hover{
     background-color: #40a77a;
 }
-.btnEdite, .btnDelete{
+.btnEdite, .btnDelete, .btnView{
     border-radius: 10px;
-    padding: 7px;
+    padding: 6px;
     cursor: pointer;
     border: 1px solid black;
     margin-left: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.btnDelete:hover, .btnEdite:hover{
+.btnDelete:hover, .btnEdite:hover, .btnView:hover{
     background-color: #41b883;
     color: #fff;
     border-color: #41b883;
 }
 @media(max-width: 780px){
-    .btnDelete, .btnEdite{
-        margin-left: 8px;
+    .btnDelete, .btnEdite, .btnView{
+        margin-left: 6px;
+    }
+}
+@media(max-width: 350px){
+    .btnEdite, .btnDelete, .btnView{
+        padding: 4px;
     }
 }

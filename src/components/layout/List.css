@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    padding: 15px;
+    padding: 10px 10px 10px 20px;
     margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -27,7 +27,7 @@
     white-space: nowrap;
 }
 .btnList button{
-    margin-right: 5px;
+    margin-right: 3px;
 }
 
 .data{
@@ -47,5 +47,10 @@
     }
     .tasks-container{
         width: 90%;
+    }
+}
+@media(max-width: 350px){
+    .tasks-container li{
+        font-size: 1rem;
     }
 }
